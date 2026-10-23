@@ -1,0 +1,15 @@
+#!/bin/sh
+# ----------------------------------------------------------------------------
+# Maven Startup Script for FitLife Backend
+# ----------------------------------------------------------------------------
+set -e
+if command -v mvn >/dev/null 2>&1; then
+    exec mvn "$@"
+else
+    echo "Maven (mvn) is not currently installed or not in PATH."
+    echo "To run FitLife backend:"
+    echo "  1. Install Java 21: brew install openjdk@21"
+    echo "  2. Install Maven:   brew install maven"
+    echo "  3. Run:             mvn spring-boot:run"
+    exit 1
+fi

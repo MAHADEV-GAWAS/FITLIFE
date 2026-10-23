@@ -1,0 +1,26 @@
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+frontend/.env
+
+# Frontend dependencies and build output
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/coverage/
+
+# Java/Maven build output
+backend/target/
+
+# Local SQLite databases
+backend/*.db
+backend/*.db-*
+backend/*.sqlite
+backend/*.sqlite3
+
+# macOS and logs
+.DS_Store
+**/.DS_Store
+*.log
